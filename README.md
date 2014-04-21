@@ -24,13 +24,18 @@ south的使用。
 
 ###通用做法
 
-1.在数据库变更前
+1. 在数据库变更前
+
     python scripts/south_migrate.py truncate paper_edu
     此操作会删掉app里面south相关信息(包括数据库和文件)
-2.在数据库变更前
+
+2. 在数据库变更前
+
     python scripts/south_migrate.py init paper_edu
     此操作会--fake旧数据库
-3.数据库变更
+
+3. 数据库变更
+
     python scripts/south_migrate.py auto paper_edu
     此操作会更改数据库表结构,删除south相关信息(包括数据库和文件)
 
